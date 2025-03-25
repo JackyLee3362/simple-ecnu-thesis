@@ -6,6 +6,8 @@
 // 封面
 #let 毕业年份 = "2025"
 #let 学校代码 = "10269"
+#let 学校 = "华东师范大学"
+#let 学校-英文 = "East China Normal University"
 #let 学号 = "512xxxxxxxx"
 
 // 中文封面
