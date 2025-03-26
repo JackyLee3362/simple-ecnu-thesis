@@ -21,7 +21,7 @@
   include "/pages/答辩委员会.typ"
 }
 
-// 全局页眉设置
+// 封面页眉设置
 #show: header-footer-style.with(footer-num: "I")
 #{
   // 样式
@@ -32,6 +32,8 @@
 }
 
 // 正文页眉设置
+// 正文图形设置
+#show: figure-style
 #show: header-footer-style
 // 正文样式和内容
 #{
