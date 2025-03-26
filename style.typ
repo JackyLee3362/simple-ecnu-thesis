@@ -21,7 +21,7 @@
   // 设置标题居中
   show heading.where(level: 1): set align(center)
   // 设置标题前后间距
-  show heading.where(level: 1): set block(above: 2em, below: 2em)
+  show heading.where(level: 1): set block(spacing: 30pt)
   doc
 }
 
@@ -104,10 +104,10 @@
   doc
 }
 // 子图样式设置
+#let sub-figure-numbering = (super, sub) => numbering("1.1a", counter(heading).get().first(), super, sub)
+#let figure-numbering = super => numbering("1.1", counter(heading).get().first(), super)
+#let equation-numbering = super => numbering("(1.1)", counter(heading).get().first(), super)
 #let figure-style(doc) = {
-  let sub-figure-numbering = (super, sub) => numbering("1.1a", counter(heading).get().first(), super, sub)
-  let figure-numbering = super => numbering("1.1", counter(heading).get().first(), super)
-  let equation-numbering = super => numbering("(1.1)", counter(heading).get().first(), super)
   show heading.where(level: 1): it => {
     counter(math.equation).update(0)
     counter(figure.where(kind: image)).update(0)
@@ -115,19 +115,18 @@
     counter(figure.where(kind: raw)).update(0)
     it
   }
+  // 子图标题样式
   show figure.caption: it => {
     let pattern = "^[^:]+" + sym.space.nobreak + "[\d.]+"
     show regex(pattern): strong
     show regex(pattern): emph
-    // show regex(pattern): set text(weight: "bold")
-    // show regex(pattern): set text(style: "italic")
     it
   }
   show figure: set figure(numbering: figure-numbering)
   show math.equation: set math.equation(numbering: equation-numbering)
-  let subpar-grid = subpar.grid.with(
-    numbering: figure-numbering,
-    numbering-sub-ref: sub-figure-numbering,
-  )
   doc
 }
+#let subpar-grid = subpar.grid.with(
+  numbering: figure-numbering,
+  numbering-sub-ref: sub-figure-numbering,
+)

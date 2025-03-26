@@ -1,6 +1,5 @@
 #import "/style.typ": *
 
-
 // 全局样式
 #show: global-style
 
@@ -32,9 +31,9 @@
 }
 
 // 正文页眉设置
-// 正文图形设置
-#show: figure-style
 #show: header-footer-style
+// 正文子图样式设置
+#show: figure-style
 // 正文样式和内容
 #{
   // 样式
