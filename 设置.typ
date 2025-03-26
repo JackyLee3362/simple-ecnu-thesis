@@ -12,8 +12,9 @@
 #let 学校-英文 = "East China Normal University"
 #let 学号 = "512xxxxxxxx"
 
-// 中文封面
+// 中文封面，分段标题使用 \n 分段
 #let 论文题目 = "简单的 Typst 论文模板"
+#let 论文题目-分段 = "简单的 Typst\n论文模板"
 #let 作者 = "张三"
 #let 院系 = "软件工程学院"
 #let 专业 = "人工智能"
@@ -22,6 +23,7 @@
 
 // 英文封面
 #let 论文题目-英文 = "Simple Typst Thesis Template"
+#let 论文题目-分段-英文 = "Simple Typst\nThesis Template"
 #let 作者-英文 = "San Zhang"
 #let 院系-英文 = "Software Engineering Institute"
 #let 专业-英文 = "Software Engineering"

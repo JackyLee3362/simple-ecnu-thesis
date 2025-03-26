@@ -1,12 +1,16 @@
 #import "/设置.typ": *
 #import "/util.typ": *
+#import "/font.typ": *
 // = 封面
+// 设置函数
+#let meta-key = rect-key.with(tail: "：", stroke: none, w: 5em)
+#let meta-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
+#let info-key = rect-key.with(tail: "：", stroke: none, w: 7em)
+#let info-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
 
-// 1. 元信息
+// 1. 学校信息
 #{
   set align(left)
-  // 定义局部函数 meta-key
-  // 等同于 meta-key(s) = distr(s, tail: "：", w: 4em)
   block(
     width: 100%,
     stack(
@@ -15,59 +19,83 @@
     ),
   )
 }
+
+// 2. 元信息
+#block(
+  width: 100%,
+  grid(
+    columns: (50pt, 1fr, 50pt, 1fr),
+    // 设置行间距
+    row-gutter: 1em,
+    meta-key("分类号"), meta-value[],
+    meta-key("学校代码"), meta-value(学校代码),
+    meta-key("密级"), meta-value[],
+    meta-key("学号"), meta-value(学号),
+  ),
+)
+
+// 3. 校徽
 #{
-  let meta-key = distr.with(tail: "：", w: 4em)
-  block(
-    width: 100%,
-    grid(
-      columns: (50pt, 1fr, 50pt, 1fr),
-      // 设置行间距
-      row-gutter: 1em,
-      meta-key("分类号"), [],
-      meta-key("学校代码"), 学校代码,
-      meta-key("密级"), [],
-      meta-key("学号"), 学号,
-    ),
-  )
-}
-// 2. 校徽与标题
-#{
-  // 该部分英文全部大写
   show text: upper
-  image("/public/ECNU-中文校徽.svg", width: 100%)
   block(
     width: 100%,
-    stack(
-      // 方向 dir: top to bottom
-      // 是从上往下
-      dir: ttb,
-      spacing: 1em,
-      学校-英文,
-      "硕士学位论文",
-      "MASTER'S DISSERTATION",
-    ),
+    above: 40pt,
+    below: 40pt,
+    image("/public/ECNU-中文校徽.svg", width: 100%),
   )
-  [论文题目：]
-  论文题目
-}
-// 3. 作者信息
-#{
-  let meta-key = distr.with(tail: "：", w: 6em)
-  block(
-    width: 100%,
-    grid(
-      columns: (90pt, 120pt),
-      align: (right, left),
-      row-gutter: 1em,
-      meta-key("院系"), 院系,
-      meta-key("专业学位类别"), 专业,
-      meta-key("指导教师"), 指导教师,
-      meta-key("学位申请人"), 作者,
-    ),
-  )
-  日期
 }
 
+// 4. 论文类型
+#block(
+  width: 100%,
+  above: 40pt,
+  below: 40pt,
+  stack(
+    // 方向 dir: top to bottom
+    dir: ttb,
+    spacing: 1em,
+    学校-英文,
+    "硕士学位论文",
+    "MASTER'S DISSERTATION",
+  ),
+)
+
+// 5. 论文标题
+#{
+  set text(size: 字号.一号)
+  block(
+    width: 100%,
+    above: 40pt,
+    below: 40pt,
+    stack(
+      dir: ltr,
+      论文题目-分段,
+    ),
+  )
+}
+
+// 6. 作者信息
+#block(
+  width: 100%,
+  above: 40pt,
+  below: 40pt,
+  grid(
+    columns: (90pt, 120pt),
+    align: (right, left),
+    row-gutter: 1em,
+    info-key("院系"), info-value(院系),
+    info-key("专业学位类别"), info-value(专业),
+    info-key("指导教师"), info-value(指导教师),
+    info-key("学位申请人"), info-value(作者),
+  ),
+)
+
+// 7. 日期
+#block(
+  above: 40pt,
+  below: 40pt,
+  日期,
+)
 
 #pagebreak()
 
@@ -81,7 +109,7 @@ Student ID: #学号
 
 #image("/public/ECNU-英文校徽.svg")
 
-Title: #论文题目-英文
+Title: #论文题目-分段-英文
 
 Department: #院系-英文
 
