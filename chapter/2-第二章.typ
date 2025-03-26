@@ -59,10 +59,15 @@
 星穹铁道，启动！
 
 #figure(
-  caption: [图片],
+  caption: [崩坏星穹铁道],
   kind: image,
   image("/image/崩坏星穹铁道.png", width: 80%),
 )
+
+关于子图
+
+
+
 
 == 伪算法样式
 
