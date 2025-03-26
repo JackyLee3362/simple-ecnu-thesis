@@ -20,6 +20,9 @@
   include "/pages/原创性声明.typ"
   include "/pages/答辩委员会.typ"
 }
+
+// 全局页眉设置
+#show: header-footer-style.with(footer-num: "I")
 #{
   // 样式
   show: abstract-style
@@ -28,6 +31,8 @@
   include "/pages/目录页.typ"
 }
 
+// 正文页眉设置
+#show: header-footer-style
 // 正文样式和内容
 #{
   // 样式
@@ -38,7 +43,11 @@
   include "/chapter/3-第三章.typ"
   include "/chapter/4-第四章.typ"
   include "/chapter/5-第五章.typ"
+}
 
+// 页面样式 2
+#{
+  show: ref-style
   include "/pages/参考文献.typ"
   include "/pages/科研情况.typ"
   include "/pages/致谢.typ"
