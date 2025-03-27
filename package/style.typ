@@ -1,8 +1,5 @@
-/*
- * 该文件定义样式，并在 main.typ 中申明使用
- */
-#import "/lib.typ": *
-#import "/设置.typ": *
+#import "/package/lib.typ": *
+#import "/用户设置.typ": *
 
 // -------------------- 页面样式 --------------------
 // 全局样式
@@ -25,57 +22,12 @@
   doc
 }
 
-// 封面样式
-#let preface(doc) = {
-  // 设置居中
-  set align(center)
-  doc
-}
-
-// 定制页面样式
-#let page-style(doc) = {
-  // 设置标题不编号且不放入目录
-  set heading(numbering: none, outlined: false)
-  doc
-}
-
-
-// 摘要样式
-#let abstract-style(doc) = {
-  // 设置标题放入目录页，但是不编号
-  set heading(numbering: none, outlined: true)
-  set page(numbering: "i")
-  doc
-}
-
-// 正文样式
-#let chapter-style(doc) = {
-  // 设置居中
-  set align(left)
-  // 设置标题编号且放入目录页中
-  set heading(
-    numbering: numbly(
-      "第{1:一}章",
-      "{1}.{2}",
-      "{1}.{2}.{3}",
-    ),
-    outlined: true,
-  )
-  doc
-}
-
-// 页面样式
-#let ref-style(doc) = {
-  set align(left)
-  set heading(outlined: true)
-  doc
-}
-
 // -------------------- 其他样式 --------------------
 // 页眉和页脚设置
 #let header-footer-style(doc, footer-num: "1") = {
   counter(page).update(1)
   set page(
+    numbering: footer-num,
     header: context {
       if calc.odd(here().page()) {
         stack(

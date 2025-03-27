@@ -1,4 +1,6 @@
-#import "/设置.typ": *
+#import "mod.typ": *
+#show: style
+
 = #(作者)硕士学位论文答辩委员会成员名单
 #show table: set align(center)
 #table(

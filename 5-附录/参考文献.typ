@@ -1,3 +1,5 @@
+#import "mod.typ": *
+#show: style
 /*
 style: 可填入的值
 "gb-7714-2005-numeric"
@@ -6,7 +8,7 @@ style: 可填入的值
 "gb-7714-2015-numeric"
 */
 #bibliography(
-  ("/ref/ref-1.bib", "/ref/ref-2.bib"),
+  ("/参考文献/文献-1.bib", "/参考文献/文献-2.bib"),
   full: false,
   style: "gb-7714-2015-numeric",
 )

@@ -1,3 +1,6 @@
+#import "mod.typ": *
+#show: style
+
 = 绪论
 
 == Typst 基本的语法

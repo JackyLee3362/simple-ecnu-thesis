@@ -1,56 +1,36 @@
-#import "/style.typ": *
+#import "/package/style.typ": *
 
 // 全局样式
 #show: global-style
 
-// 封面样式
-#{
-  // 样式
-  show: preface
-  // 内容
-  include "/pages/封面.typ"
-}
+// 封面
+#include "1-封面/中文封面.typ"
+#include "1-封面/英文封面.typ"
+
+// 说明页面
+#include "2-说明/原创性声明.typ"
+#include "2-说明/答辩委员会.typ"
+
+// 页眉 页脚罗马字母 设置
+#show: header-footer-style.with(footer-num: "i")
+// 摘要和目录
+#include "3-摘要/摘要.typ"
+#include "3-摘要/目录页.typ"
 
 
-#{
-  // 样式
-  show: page-style
-  // 内容
-  include "/pages/原创性声明.typ"
-  include "/pages/答辩委员会.typ"
-}
-
-// 封面页眉设置
-#show: header-footer-style.with(footer-num: "I")
-#{
-  // 样式
-  show: abstract-style
-  // 内容
-  include "/pages/摘要.typ"
-  include "/pages/目录页.typ"
-}
-
-// 正文页眉设置
+// 页角设置
 #show: header-footer-style
-// 正文子图样式设置
+// 子图样式设置
 #show: figure-style
-// 正文样式和内容
-#{
-  // 样式
-  show: chapter-style
-  // 内容
-  include "/chapter/1-第一章.typ"
-  include "/chapter/2-第二章.typ"
-  include "/chapter/3-第三章.typ"
-  include "/chapter/4-第四章.typ"
-  include "/chapter/5-第五章.typ"
-}
+// 正文部分
+#include "/4-正文/1-第一章.typ"
+#include "/4-正文/2-第二章.typ"
+#include "/4-正文/3-第三章.typ"
+#include "/4-正文/4-第四章.typ"
+#include "/4-正文/5-第五章.typ"
 
-// 页面样式 2
-#{
-  show: ref-style
-  include "/pages/参考文献.typ"
-  include "/pages/科研情况.typ"
-  include "/pages/致谢.typ"
-}
+// 附录部分
+#include "/5-附录/参考文献.typ"
+#include "/5-附录/科研情况.typ"
+#include "/5-附录/致谢.typ"
 

@@ -1,4 +1,5 @@
-#import "/设置.typ": *
+#import "mod.typ": *
+#show: style
 
 = #(学校)学位论文原创性声明
 

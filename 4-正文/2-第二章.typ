@@ -1,4 +1,6 @@
-#import "/style.typ": subpar-grid
+#import "mod.typ": *
+#show: style
+
 = 预备知识
 
 == 图形示例

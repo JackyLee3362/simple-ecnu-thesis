@@ -1,4 +1,6 @@
-#import "/lib.typ": pseudocode, pseudocode-list
+#import "mod.typ": *
+#show: style
+
 = 正文部分
 
 == 人工智能

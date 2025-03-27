@@ -1,8 +1,8 @@
-#import "/设置.typ": *
-#import "/util.typ": *
-#import "/font.typ": *
-// = 封面
+#import "mod.typ": *
+#show: style
+// 中文封面
 // 设置函数
+
 #let meta-key = rect-key.with(tail: "：", stroke: none, w: 5em)
 #let meta-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
 #let info-key = rect-key.with(tail: "：", stroke: none, w: 7em)
@@ -99,24 +99,4 @@
 
 #pagebreak()
 
-// = 英文封面
 
-Dissertation for Master's Degree (Professional) in #毕业年份
-
-University Code #学校代码
-
-Student ID: #学号
-
-#image("/public/ECNU-英文校徽.svg")
-
-Title: #论文题目-分段-英文
-
-Department: #院系-英文
-
-Supervisor: #指导教师-英文
-
-Field: #专业-英文
-
-Candidate: #作者-英文
-
-#pagebreak()
