@@ -4,3 +4,5 @@
 #import "@preview/hydra:0.6.0": hydra
 // 实现子图功能
 #import "@preview/subpar:0.2.1"
+// 实现伪代码功能
+#import "@preview/lovelace:0.3.0": pseudocode, pseudocode-list

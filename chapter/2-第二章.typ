@@ -138,27 +138,24 @@ print("hello")
 
 == 数学公式
 
-行内数学公式 $pi = 3.14$
+欧拉公式 $e ^ (i pi)  + 1 = 0$ 由数学中最重要的五个数组成 ... ...
 
-行间数学公式
-
-$
-  sin^2 x + cos^2 x = 1
-$
-
-
-行间换行公式
+常见的激活函数如@eqt-activation 所示
 
 $
-  y &= 5 x + 1 & "其中" x& > 0\
-  y &= 6 x + 2 & forall x& != 1\
-  y &= 2
+  & "ReLU" (x) &= &max lr((0 , x))\
+  & "Sigmoid" (x) & = &frac(e^x, 1 plus e^x)\
+  & "Tanh" (x) & = &frac(e^x - e^(minus x), e^x plus e^(minus x))\
+  & "Softmax" (x) & = &frac(e^(x_i), sum_i e^(x_i))
+$ <eqt-activation>
+
+常见的损失函数有
+
 $
-
-公式的引用
-
-$ phi.alt := (1 + sqrt(5)) / 2 $ <eqt-phi>
-
-对于@eqt-phi，我们可以看出 ......
+  & "MSE平方损失函数" L(Y | f(X)) &= &sum_N (Y-f(X))^2 \
+  & "对数损失函数" L(Y, "Pr"(Y|X)) &= &- log "Pr"(Y|X) \
+  & "01损失函数" L(Y, f(X)) &= &cases(1 "if " Y != f (X), 0 "if " Y = f (X)) \
+  & "Hinge 损失函数" L(y, f(X)) &=& max(0, 1 - y f(x))
+$ 
 
 #pagebreak()
