@@ -1,3 +1,5 @@
+#import "mod.typ": *
+#show: style
 = 摘要
 
 摘要正文
@@ -6,10 +8,4 @@
 
 #pagebreak()
 
-= ABSTRACT
 
-#lorem(100)
-
-Keyword: keyword1, keyword2, keyword3
-
-#pagebreak()

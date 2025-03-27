@@ -14,7 +14,8 @@
 // 页眉 页脚罗马字母 设置
 #show: header-footer-style.with(footer-num: "i")
 // 摘要和目录
-#include "3-摘要/摘要.typ"
+#include "3-摘要/中文摘要.typ"
+#include "3-摘要/英文摘要.typ"
 #include "3-摘要/目录页.typ"
 
 

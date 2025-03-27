@@ -1,3 +1,6 @@
+
+#import "mod.typ": *
+#show: style
 #outline()
 
 #pagebreak()

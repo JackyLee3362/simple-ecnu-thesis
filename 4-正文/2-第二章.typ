@@ -66,14 +66,6 @@
   image("/image/崩坏星穹铁道.png", width: 80%),
 )
 
-关于子图
-需要首先引入 `grid`，并重命名为 `subfigre`，
-就可以使用了。
-
-```typst
-#import "/lib.typ": subpar.grid as subfigure
-```
-
 == 子图的不同排列方式
 
 排列方式1
