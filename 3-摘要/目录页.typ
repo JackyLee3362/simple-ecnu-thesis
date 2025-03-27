@@ -2,10 +2,14 @@
 
 #pagebreak()
 
-#outline(title: "图目录", target: figure.where(kind: image))
+= 图目录
+
+#outline(title: none, target: figure.where(kind: image))
 
 #pagebreak()
 
-#outline(title: "表目录", target: figure.where(kind: table))
+= 表目录
+
+#outline(title: none, target: figure.where(kind: table))
 
 #pagebreak()
