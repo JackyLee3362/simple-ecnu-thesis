@@ -2,14 +2,22 @@
 
 项目地址：[JackyLee3362/simple-typst-thesis-template](https://github.com/JackyLee3362/simple-typst-thesis-template)
 
-## 项目介绍
+![alt text](assets/beamer.png)
 
-本项目基于 [modern-ecnu-thesis – Typst Universe](https://typst.app/universe/package/modern-ecnu-thesis/) 模板，
-经过本人的重构优化，
-适合**边写论文边学习** Typst 语法，
+## 🔍️ 项目介绍
+
+本项目基于 [华东师范大学本科 / 研究生学位论文 Typst 模板](https://github.com/jtchen2k/modern-ecnu-thesis)，
+进行了以下的 **重构与优化**：
+
+- 💄 开箱即用，重新设计了界面，更加美观
+- ⚡️ 使用中文变量，易于理解，对无编程经验的小白非常友好
+- 🗃️ 重构了项目结构，可读性更好
+- 💡 扩展性好，易于深度定制
+
+本项目非常适合**边写论文边学习** Typst 语法，
 并且可以定制自己的样式。
 
-## 快速开始
+## 🙈 快速开始
 
 ```sh
 git clone https://github.com/JackyLee3362/simple-typst-thesis-template.git
@@ -29,13 +37,13 @@ code simple-typst-thesis-template
 
 即可开始编写论文！
 
-## 如何配置？
+## 🔧 如何配置？
 
 在项目中选择 `用户配置.typ` 文件，
 修改其中的变量，
 即可实时预览变化。
 
-## 关于字体
+## 🧐 关于字体
 
 本项目需要的字体在 `package/font.typ` 中配置，
 建议下载
@@ -47,7 +55,7 @@ code simple-typst-thesis-template
 - 阿里巴巴普惠体: `Alibaba PuHuiTi 2.0`，用于中文加粗
 - 等宽字体 JetBrains Mono: `JetBrains Mono`，用于代码块
 
-## 项目的结构
+## 🗃️ 项目结构
 
 ```sh
 Project
@@ -86,6 +94,7 @@ Project
 │
 ├───demo               示例文件夹，可以单独预览
 ├───image              存放论文图片的文件夹
+├───style              存放样式的文件夹
 ├───package
 │       font.typ       字体配置文件
 │       lib.typ        导入三方库的文件
@@ -114,3 +123,5 @@ Typst 作为一款排版工具，
 - [The Raindrop-Blue Book (Typst 中文教程)](https://typst-doc-cn.github.io/tutorial/)
 - [Typst 中文社区导航](https://typst-doc-cn.github.io/guide/)
 - [nju-lug/modern-nju-thesis: 南京大学学位论文 Typst 模板 modern-nju-thesis](https://github.com/nju-lug/modern-nju-thesis)
+- [jtchen2k/modern-ecnu-thesis: 华东师范大学本科 / 研究生学位论文 Typst 模板 modern-ecnu-thesis](https://github.com/jtchen2k/modern-ecnu-thesis)
+- Typst qq 中文讨论群

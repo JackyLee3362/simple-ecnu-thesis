@@ -1,5 +1,5 @@
 // true 表示开启盲审， false 表示关闭
-#let 盲审模式 = true
+#let 盲审模式 = false
 // true 表示所有的章节从奇数页开始，false 表示关闭
 #let 双页模式 = false
 //

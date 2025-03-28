@@ -2,7 +2,7 @@
 
 ## v1.1 - UNRELEASED
 
-1. 完善 `README.md`
+1. ✅ 完善 `README.md`
 2. ✅ 修改 `style` 结构
 
 ## v1.0 - 2025-03-28
