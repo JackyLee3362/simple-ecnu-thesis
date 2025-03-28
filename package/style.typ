@@ -2,7 +2,6 @@
 #import "/package/font.typ": *
 #import "/package/util.typ": *
 #import "/用户设置.typ": *
-
 // 定义全局页面样式
 #let global-page-style(doc) = {
   // 设置页边距
@@ -27,12 +26,13 @@
     switch-two-side(双页模式)
     v(1em)
     it
+    v(.5em)
   }
   // 字号设置
   show heading: set text(size: 字号.小四)
   show heading.where(level: 1): set text(size: 字号.三号)
   show heading.where(level: 2): set text(size: 字号.四号)
-  // 设置段间距
+  // 设置标题间距
   show heading: set block(spacing: 2em)
   show heading: set block(spacing: 1.5em)
   // 设置一级标题居中
@@ -47,7 +47,7 @@
   // 设置字体和字号
   set text(font: 字体.宋体, size: 字号.小四)
   // 设置段落样式 - 首段缩进 + 段间距
-  set par(justify: true, first-line-indent: (amount: 2em, all: true), spacing: 1em)
+  set par(justify: true, first-line-indent: (amount: 2em, all: true), spacing: 1em, leading: 1em)
   // 设置粗体样式
   show strong: set text(font: 字体.黑体, weight: "regular")
   show emph: set text(font: 字体.楷体)
