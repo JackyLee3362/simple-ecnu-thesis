@@ -1,3 +1,7 @@
+#import "/package/font.typ": *
+#let key-name-style(key) = {
+  text(font: 字体.黑体)
+}
 // 摘要样式
 #let style(doc) = {
   // 页眉设置
