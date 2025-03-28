@@ -2,8 +2,10 @@
 #show: style
 
 = 正文部分
+<chapter-3>
 
 == 人工智能
+<chapter-3-ai>
 
 本文的符号标记表如@symbol-table 所示
 

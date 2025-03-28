@@ -3,63 +3,69 @@
 
 = 预备知识
 
-== 图形示例
+在论文中我们经常使用图片或者表格，
+在 `Typst` 中我们使用 `figure` 来包裹他们，
+
+
+
+== 图形 `figure` 示例
 
 === 图形中放表格
 
+七神（The Seven Gods），
+又名尘世七执政，
+是米哈游出品游戏《原神》及其衍生作品中的角色合称，
+指的是分别掌控七种元素（即火、水、风、雷、草、冰、岩），
+并以不同的理念统御提瓦特大陆七国的七位神灵。
+如@table-normal 所示：
+
 #figure(
-  caption: [普通表格],
+  caption: [尘世七执政],
   kind: table, // 可以注释
   table(
     columns: 3,
-    table.header([a], [b], [c]),
-    [d], [e], [f],
-    [g], [h], [i],
+    table.header([], [神之眼], [尘世七执政]),
+    [蒙德], [风], [巴巴托斯],
+    [璃月], [🪨], [摩拉克斯],
+    [稻妻], [⚡], [巴尔泽布],
+    [须弥], [草], [小吉祥草王],
+    [枫丹], [💦], [芙卡洛斯],
+    [穆纳塔], [🔥], [玛薇卡],
+    [至冬], [❄️], [冰之女皇],
   ),
 ) <table-normal>
 
 引用*普通表格*@table-normal，
 或者这样写#ref(<table-normal>)
 
-#figure(
-  caption: [三线表],
-  // kind: table, // 可以注释
-  table(
-    columns: 3,
-    stroke: none,
-    align: center,
-    table.hline(),
-    table.header([a], [b], [c]),
-    table.hline(stroke: 0.5pt),
-    [d], [e], [f],
-    [g], [h], [i],
-    table.hline(),
-  ),
-) <table-demo>
-
-引用三线表 @table-demo
-
 === 图形：三线表 + 合并单元格
 
+愚人众的代号以及称呼
+
 #figure(
-  caption: [合并单元格],
+  caption: [愚人众],
   table(
     columns: 3,
     stroke: none,
     align: center,
     table.hline(),
-    table.header(table.cell(colspan: 2)[a], [c]),
+    table.header(table.cell(colspan: 2)[代号], [称呼]),
     table.hline(stroke: 0.5pt),
-    table.cell(colspan: 2)[10], [f],
-    [g], [h], [i],
+    [统括官], [「丑角」], [皮耶罗],
+    [No.1], [「队长」], [卡皮塔诺],
+    [No.2], [「博士」], [多托雷],
+    [No.3], [「少女」], [哥伦比娅],
+    table.cell(colspan: 2)[████████], [███],
+
     table.hline(),
   ),
-)
+)<table-demo>
 
 
 == 图形中放入图片
 
 星穹铁道，启动！
+
 #figure(
   caption: [崩坏星穹铁道],
   kind: image,
@@ -90,7 +96,7 @@
   columns: (1fr, 1fr),
   figure(
     caption: [我是第一个子图a],
-    rect(stroke: 1pt, height: 8em, width: 40%, fill: rgb("9bea1e")),
+    rect(stroke: 1pt, height: 3em, width: 40%, fill: rgb("9bea1e")),
   ),
   figure(
     caption: [我是第二个子图b],
@@ -106,21 +112,21 @@
   kind: image,
   figure(
     caption: [我是子图a],
-    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeaeee")),
+    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("aeaeee")),
   ),
   <sub-figure-1>,
   figure(
     caption: [我是图b],
-    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeeeee")),
+    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("aeeeee")),
   ),
   <sub-figure-2>,
   figure(
     caption: [我是子图c],
-    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeae1e")),
+    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("aeae1e")),
   ),
   figure(
     caption: [我是子图d],
-    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("a10ee1")),
+    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("a10ee1")),
   ),
   label: <super-figure>,
 )
@@ -131,12 +137,14 @@
 
 == 伪算法样式
 
-== 代码样式
+见 @chapter-3[] 的 @chapter-3-ai，
+或者这样写#ref(<chapter-3>, supplement: [])也可以，
+本质上 `@chapter-3` 是语法糖。
 
-```python
-print("hello")
+比较两种用法
 
-```
+- @chapter-3
+- @chapter-3[]
 
 == 数学公式
 

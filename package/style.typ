@@ -74,6 +74,8 @@
   // 设置列表样式
   set enum(indent: 2em, numbering: it => text(baseline: .2em, numbering("1.", it)))
   set list(indent: 2em, marker: it => text(baseline: .2em)[•])
+  // 处理一级标题的引用格式
+
   doc
 }
 
