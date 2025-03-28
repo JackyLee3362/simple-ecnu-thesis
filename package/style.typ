@@ -2,6 +2,7 @@
 #import "/package/font.typ": *
 #import "/package/util.typ": *
 #import "/用户设置.typ": *
+
 // 定义全局页面样式
 #let global-page-style(doc) = {
   // 设置页边距
@@ -13,16 +14,6 @@
       right: 90pt,
     ),
   )
-  doc
-}
-
-// CJK 换行问题修复
-#let han-or-punct = "[-\p{sc=Hani}。．，、：；！‼？⁇⸺——……⋯⋯～–—·・‧/／「」『』“”‘’（）《》〈〉【】〖〗〔〕［］｛｝＿﹏●•]"
-#let cjk-fix(doc) = {
-  show regex(han-or-punct + " " + han-or-punct): it => {
-    let (a, _, b) = it.text.clusters()
-    a + b
-  }
   doc
 }
 
@@ -83,6 +74,10 @@
 #let sub-figure-numbering = (super, sub) => numbering("1.1a", counter(heading).get().first(), super, sub)
 #let figure-numbering = super => numbering("1.1", counter(heading).get().first(), super)
 #let equation-numbering = super => numbering("(1.1)", counter(heading).get().first(), super)
+#let subpar-grid = subpar.grid.with(
+  numbering: figure-numbering,
+  numbering-sub-ref: sub-figure-numbering,
+)
 #let figure-style(doc) = {
   show heading.where(level: 1): it => {
     counter(math.equation).update(0)
@@ -102,10 +97,11 @@
   show math.equation: set math.equation(numbering: equation-numbering)
   doc
 }
-#let subpar-grid = subpar.grid.with(
-  numbering: figure-numbering,
-  numbering-sub-ref: sub-figure-numbering,
-)
+
+
+//  ==================== 部分页面会用到的样式 ====================
+#import "/style/图形样式.typ": *
+#import "/style/页眉页脚样式.typ": *
 
 // 全局样式
 #let global-style(doc) = {
@@ -117,55 +113,11 @@
   show: global-content-style
   // 设置图形/子图样式
   show: figure-style
+  // 设置中文字符换行修复
+  show: cjk-fix
   // 设置换页
   doc
 }
 
-// --------------------- 部分页面会用到的样式 --------------------
-// 标题样式定义
-#let header-style(doc) = {
-  // 设置标题编号且放入目录页中
-  set heading(
-    numbering: numbly(
-      "第{1:一}章",
-      "{1}.{2}",
-      "{1}.{2}.{3}",
-    ),
-    outlined: true,
-  )
-  doc
-}
-
-// 页眉和页脚设置
-#let _header-content(left, right) = {
-  set text(size: 字号.五号)
-  stack(
-    dir: ttb,
-    left + h(1fr) + right,
-    v(.5em),
-    line(length: 100%, stroke: .5pt),
-    v(.15em),
-    line(length: 100%, stroke: .5pt),
-  )
-}
-#let header-footer-style(doc, footer-num: "1") = {
-  counter(page).update(1)
-  set page(
-    numbering: footer-num,
-    header: context {
-      if calc.odd(here().page()) {
-        _header-content(hydra(1, skip-starting: false), 页眉标题)
-      } else {
-        _header-content(页眉标题, hydra(1, skip-starting: false))
-      }
-    },
-    footer: context {
-      set text(size: 字号.五号)
-      if calc.odd(counter(page).get().first()) { h(1fr) }
-      counter(page).display(footer-num)
-    },
-  )
-  doc
-}
 
 
