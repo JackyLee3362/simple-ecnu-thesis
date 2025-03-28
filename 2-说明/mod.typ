@@ -11,6 +11,6 @@
 
 #let sudo-heading(title) = {
   set align(center)
-  text(font: 字体.黑体, size: 字号.三号, title, weight: "medium")
+  text(font: 黑体, size: 三号, title, weight: "medium")
   block(below: 1.5em)
 }

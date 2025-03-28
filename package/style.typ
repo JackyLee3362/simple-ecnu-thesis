@@ -1,88 +1,27 @@
 #import "/package/lib.typ": *
 #import "/package/font.typ": *
 #import "/package/util.typ": *
+// 自定义变量和样式
 #import "/用户设置.typ": *
-
-// 定义全局页面样式
-#let global-page-style(doc) = {
-  // 设置页边距
-  set page(
-    margin: (
-      top: 72pt,
-      bottom: 72pt,
-      left: 90pt,
-      right: 90pt,
-    ),
-  )
-  doc
-}
-
-// 定义全局标题样式
-#let global-heading-style(doc) = {
-  // 字体设置
-  show heading: set text(font: 字体.黑体, weight: "bold")
-  // 设置一级标题间距和自动换页
-  show heading.where(level: 1): it => {
-    // 这里不使用 above 是因为靠近页边距，不生效
-    switch-two-side(双页模式)
-    v(1em)
-    it
-    v(.5em)
-  }
-  // 字号设置
-  show heading: set text(size: 字号.小四)
-  show heading.where(level: 1): set text(size: 字号.三号)
-  show heading.where(level: 2): set text(size: 字号.四号)
-  // 设置标题间距
-  show heading: set block(spacing: 2em)
-  show heading: set block(spacing: 1.5em)
-  // 设置一级标题居中
-  show heading.where(level: 1): set align(center)
-  doc
-}
-
-// 定义全局内容样式
-#let global-content-style(doc) = {
-  // 设置地区和语言
-  set text(region: "CN", lang: "zh")
-  // 设置字体和字号
-  set text(font: 字体.宋体, size: 字号.小四)
-  // 设置段落样式 - 首段缩进 + 段间距
-  set par(justify: true, first-line-indent: (amount: 2em, all: true), spacing: 1em, leading: 1em)
-  // 设置粗体样式
-  show strong: set text(font: 字体.黑体, weight: "regular")
-  show emph: set text(font: 字体.楷体)
-  show raw: set text(font: 字体.等宽)
-  show raw.where(block: true): set par(leading: 1em)
-  // 设置列表样式
-  set enum(indent: 2em, numbering: it => text(baseline: .2em, numbering("1.", it)))
-  set list(indent: 2em, marker: it => text(baseline: .2em)[•])
-  // 处理一级标题的引用格式
-  doc
-}
-// 全局字体设置
-#let global-font(doc) = {
-}
-
-
-
-//  ==================== 部分页面会用到的样式 ====================
+// 拆分定义，更好理解
+#import "/style/页面样式.typ": *
+#import "/style/标题样式.typ": *
+#import "/style/内容样式.typ": *
 #import "/style/图形样式.typ": *
 #import "/style/页眉页脚样式.typ": *
 
 // 全局样式
 #let global-style(doc) = {
-  // 设置页面
-  show: global-page-style
-  // 设置标题
-  show: global-heading-style
-  // 设置内容
-  show: global-content-style
-  // 设置图形/子图样式
+  // 设置页面样式
+  show: page-style
+  // 设置标题样式
+  show: heading-style.with(sans-serif: 黑体, h-size: 小四, h1-size: 三号, h2-size: 四号)
+  // 设置内容样式
+  show: content-style.with(serif: 宋体, sans-serif: 黑体, raw-font: 等宽, emph-font: 楷体, size: 小四)
+  // 设置图形样式
   show: figure-style
   // 设置中文字符换行修复
   show: cjk-fix
-  // 设置换页
   doc
 }
 

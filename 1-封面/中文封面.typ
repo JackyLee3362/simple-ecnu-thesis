@@ -42,7 +42,7 @@
 
 // 4. 论文类型
 #{
-  set text(font: 字体.封面, size: 字号.四号)
+  set text(font: 封面字体, size: 四号)
   block(
     width: 100%,
     above: 40pt,
@@ -59,7 +59,7 @@
 
 // 5. 论文标题
 #{
-  set text(font: 字体.封面, size: 字号.一号, weight: "semibold")
+  set text(font: 封面字体, size: 一号, weight: "semibold")
   block(
     width: 100%,
     above: 40pt,
@@ -72,7 +72,7 @@
 
 // 6. 作者信息
 #{
-  set text(font: 字体.封面, weight: "semibold")
+  set text(font: 封面字体, weight: "semibold")
   block(
     width: 100%,
     above: 60pt,
@@ -92,7 +92,7 @@
 
 // 7. 日期
 #{
-  set text(font: 字体.封面)
+  set text(font: 封面字体)
   block(
     width: 100%,
     above: 80pt,

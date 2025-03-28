@@ -5,7 +5,7 @@
 // 元信息
 #{
   set align(left)
-  set text(size: 字号.五号)
+  set text(size: 五号)
   block(
     width: 100%,
     stack(
@@ -17,7 +17,7 @@
 
 // 学校信息
 #{
-  set text(size: 字号.五号)
+  set text(size: 五号)
   block(
     width: 100%,
     above: 20pt,
@@ -43,7 +43,7 @@
 
 // 标题
 #{
-  set text(size: 字号.二号)
+  set text(size: 二号)
   block(
     width: 100%,
     above: 100pt,
@@ -57,7 +57,7 @@
 
 // 作者信息
 #{
-  set text(font: 字体.封面, weight: "semibold")
+  set text(font: 封面字体, weight: "semibold")
   block(
     width: 100%,
     above: 100pt,
@@ -76,7 +76,7 @@
 
 // 日期
 #{
-  set text(font: 字体.封面)
+  set text(font: 封面字体)
   block(
     above: 100pt,
     日期-英文,

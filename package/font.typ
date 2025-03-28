@@ -1,22 +1,23 @@
-#let 字号 = (
-  初号: 42pt,
-  小初: 36pt,
-  一号: 26pt,
-  小一: 24pt,
-  二号: 22pt,
-  小二: 18pt,
-  三号: 16pt,
-  小三: 15pt,
-  四号: 14pt,
-  中四: 13pt,
-  小四: 12pt,
-  五号: 10.5pt,
-  小五: 9pt,
-  六号: 7.5pt,
-  小六: 6.5pt,
-  七号: 5.5pt,
-  小七: 5pt,
-)
+// --------------------- 字号 ---------------------
+#let 初号 = 42pt
+#let 小初 = 36pt
+#let 一号 = 26pt
+#let 小一 = 24pt
+#let 二号 = 22pt
+#let 小二 = 18pt
+#let 三号 = 16pt
+#let 小三 = 15pt
+#let 四号 = 14pt
+#let 中四 = 13pt
+#let 小四 = 12pt
+#let 五号 = 10.5pt
+#let 小五 = 9pt
+#let 六号 = 7.5pt
+#let 小六 = 6.5pt
+#let 七号 = 5.5pt
+#let 小七 = 5pt
+
+// --------------------- 具体的字体 ---------------------
 // 英文字体
 #let Times-New-Roman = "Times New Roman"
 // 宋体
@@ -53,23 +54,22 @@
 #let Inconsolata = "Inconsolata"
 #let Courier-New = "Courier New"
 
-// 定义 fallback 的字体
-#let 字体 = (
-  宋体: (Times-New-Roman, 方正宋体, 华文宋体, 华文宋体-2, 中易宋体),
-  仿宋: (Times-New-Roman, 方正仿宋, 华文仿宋, 华文仿宋-2, 仿宋, 仿宋-2),
-  中宋: (Times-New-Roman, 华文中宋, 中易宋体),
-  黑体: (Times-New-Roman, 阿里巴巴普惠体, 微软雅黑, 方正黑体, 华文黑体, 华文黑体-2, 中易黑体),
-  楷体: (Times-New-Roman, 方正楷体, 华文楷体, 华文楷体-2, 楷体, 楷体-2),
-  封面: (Times-New-Roman, 华文宋体-2, 方正宋体, 中易宋体),
-  等宽: (
-    JetBrains-Mono,
-    JetBrains-Mono-NL,
-    Consolas,
-    Inconsolata,
-    Courier-New,
-    阿里巴巴普惠体,
-    微软雅黑,
-    方正黑体,
-    华文黑体-2,
-  ),
+// ---------------------- Fallback 字体 ------------------------
+// 从左到右依次查找，直到找不到
+#let 宋体 = (Times-New-Roman, 方正宋体, 华文宋体, 华文宋体-2, 中易宋体)
+#let 仿宋 = (Times-New-Roman, 方正仿宋, 华文仿宋, 华文仿宋-2, 仿宋, 仿宋-2)
+#let 中宋 = (Times-New-Roman, 华文中宋, 中易宋体)
+#let 黑体 = (Times-New-Roman, 阿里巴巴普惠体, 微软雅黑, 方正黑体, 华文黑体, 华文黑体-2, 中易黑体)
+#let 楷体 = (Times-New-Roman, 方正楷体, 华文楷体, 华文楷体-2, 楷体, 楷体-2)
+#let 封面字体 = (Times-New-Roman, 华文宋体-2, 方正宋体, 中易宋体)
+#let 等宽 = (
+  JetBrains-Mono,
+  JetBrains-Mono-NL,
+  Consolas,
+  Inconsolata,
+  Courier-New,
+  阿里巴巴普惠体,
+  微软雅黑,
+  方正黑体,
+  华文黑体-2,
 )

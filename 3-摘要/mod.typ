@@ -3,20 +3,20 @@
 #import "/package/util.typ": *
 
 #let key-name(key) = {
-  text(font: 字体.黑体, size: 字号.四号, key)
+  text(font: 黑体, size: 四号, key)
 }
 
 #let outline-font-style(doc) = {
   show outline.entry.where(level: 1): it => {
-    set text(font: 字体.黑体, size: 字号.四号)
+    set text(font: 黑体, size: 四号)
     it
   }
   show outline.entry.where(level: 2): it => {
-    set text(font: 字体.黑体, size: 字号.小四)
+    set text(font: 黑体, size: 小四)
     it
   }
   show outline.entry.where(level: 3): it => {
-    set text(font: 字体.宋体, size: 字号.小四)
+    set text(font: 宋体, size: 小四)
     it
   }
   set outline(indent: 2em)
