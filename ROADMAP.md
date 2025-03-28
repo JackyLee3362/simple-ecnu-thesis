@@ -2,7 +2,7 @@
 
 ## Version 0.6
 
-> DEVELOPING
+> 2025-03-28 RELEASE
 
 1. ✅ bug: 图目录和表目录不存在目录页中
 2. ✅ 摘要拆分
