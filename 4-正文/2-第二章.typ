@@ -18,7 +18,7 @@
   ),
 ) <table-normal>
 
-引用普通表格@table-normal，
+引用*普通表格*@table-normal，
 或者这样写#ref(<table-normal>)
 
 #figure(
@@ -74,11 +74,11 @@
   caption: [我是一张超图，子图纵向排列],
   figure(
     caption: [我是第一个子图a],
-    rect(stroke: 1pt, height: 8em, width: 80%, fill: rgb("eeeeaa")),
+    rect(stroke: 1pt, height: 4em, width: 60%, fill: rgb("eeeeaa")),
   ),
   figure(
     caption: [我是第二个子图b],
-    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("eeaaee")),
+    rect(stroke: 1pt, height: 6em, width: 80%, fill: rgb("eeaaee")),
   ),
 )
 

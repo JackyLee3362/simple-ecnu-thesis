@@ -54,18 +54,21 @@
 ) <algo:split>
 
 使用 python 语言可以表述为
-
-```py
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_iris
-# 读取数据
-iris = load_iris()
-# 取出特征和标签
-X = iris.data
-y = iris.target
-# 分割数据集
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-```
+#figure(
+  caption: [代码示例],
+  ```py
+  """该算法由 sklearn 官网提供"""
+  from sklearn.model_selection import train_test_split
+  from sklearn.datasets import load_iris
+  # 读取数据
+  iris = load_iris()
+  # 取出特征和标签
+  X = iris.data
+  y = iris.target
+  # 分割数据集
+  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+  ```,
+)
 
 == 深度学习
 

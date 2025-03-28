@@ -23,6 +23,7 @@
   微软雅黑: "Microsoft YaHei",
   阿里巴巴普惠体: "Alibaba PuHuiTi 2.0",
   思源黑体: "Source Han Serif SC",
+  微软正黑体: "Microsoft Sans Serif",
   // 楷体
   方正楷体: "FZKai-Z03S",
   华文楷体: "STKaiti",
@@ -34,6 +35,12 @@
   // 隶书
   华文隶书: "STLiti",
   隶书: "Lisu",
+  // 等宽
+  JetBrains-Mono: "JetBrains Mono",
+  JetBrains-Mono-NL: "JetBrains Mono NL",
+  Consolas: "Consolas",
+  Inconsolata: "Inconsolata",
+  Courier-New: "Courier New",
 )
 
 #let weights = (

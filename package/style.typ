@@ -20,8 +20,8 @@
 // 定义全局标题样式
 #let global-heading-style(doc) = {
   // 字体设置
-  show heading: set text(font: 字体.黑体, weight: "semibold")
-  // 设置一级标题间距
+  show heading: set text(font: 字体.黑体, weight: "bold")
+  // 设置一级标题间距和自动换页
   show heading.where(level: 1): it => {
     // 这里不使用 above 是因为靠近页边距，不生效
     switch-two-side(双页模式)
@@ -48,6 +48,24 @@
   set text(font: 字体.宋体, size: 字号.小四)
   // 设置段落样式 - 首段缩进 + 段间距
   set par(justify: true, first-line-indent: (amount: 2em, all: true), spacing: 1em)
+  // 设置粗体样式
+  show strong: set text(font: 字体.黑体, weight: "regular")
+  show emph: set text(font: 字体.楷体)
+  show raw: set text(font: 字体.等宽)
+  show raw.where(block: true): set par(leading: 1em)
+  // 设置 figure 表格表头
+  show figure.where(kind: table): set figure.caption(position: top)
+  // 设置 figure 标题样式
+  show figure.caption: c => {
+    block(inset: (top: 0.4em, bottom: 0.4em))[
+      #text(font: 字体.楷体)[#c.supplement #context c.counter.display(c.numbering) #h(.3em) #c.body]
+    ]
+  }
+  // 设置列表样式
+  set enum(indent: 2em, numbering: it => text(baseline: .2em, numbering("1.", it)))
+  set list(indent: 2em, marker: it => text(baseline: .2em)[•])
+
+
   doc
 }
 

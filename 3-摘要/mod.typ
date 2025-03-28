@@ -26,7 +26,7 @@
 
 #let outline-style(doc) = {
   show outline.entry: it => {
-    set block(spacing: 12pt)
+    set block(spacing: 16pt)
     it
   }
   doc

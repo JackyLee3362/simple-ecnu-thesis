@@ -46,6 +46,12 @@
 #let 中易楷体 = "SimKai"
 #let 楷体 = "Kaiti"
 #let 楷体-2 = "Kaiti_GB2312"
+// 等宽
+#let JetBrains-Mono = "JetBrains Mono"
+#let JetBrains-Mono-NL = "JetBrains Mono NL"
+#let Consolas = "Consolas"
+#let Inconsolata = "Inconsolata"
+#let Courier-New = "Courier New"
 
 // 定义 fallback 的字体
 #let 字体 = (
@@ -55,4 +61,15 @@
   黑体: (Times-New-Roman, 阿里巴巴普惠体, 微软雅黑, 方正黑体, 华文黑体, 华文黑体-2, 中易黑体),
   楷体: (Times-New-Roman, 方正楷体, 华文楷体, 华文楷体-2, 楷体, 楷体-2),
   封面: (Times-New-Roman, 华文宋体-2, 方正宋体, 中易宋体),
+  等宽: (
+    JetBrains-Mono,
+    JetBrains-Mono-NL,
+    Consolas,
+    Inconsolata,
+    Courier-New,
+    阿里巴巴普惠体,
+    微软雅黑,
+    方正黑体,
+    华文黑体-2,
+  ),
 )
