@@ -30,6 +30,8 @@
 #let 华文仿宋-2 = "FangSong SC"
 #let 仿宋 = "FangSong"
 #let 仿宋-2 = "FangSong_GB2312"
+// 中宋
+#let 华文中宋 = "STZhongsong"
 // 黑体
 #let 方正黑体 = "FZHei-B01S"
 #let 华文黑体 = "STHeiti"
@@ -47,6 +49,8 @@
 #let 字体 = (
   宋体: (Times-New-Roman, 方正宋体, 华文宋体, 华文宋体-2, 中易宋体),
   仿宋: (Times-New-Roman, 方正仿宋, 华文仿宋, 华文仿宋-2, 仿宋, 仿宋-2),
+  中宋: (Times-New-Roman, 华文中宋, 中易宋体),
   黑体: (Times-New-Roman, 方正黑体, 华文黑体, 华文黑体-2, 中易黑体),
   楷体: (Times-New-Roman, 方正楷体, 华文楷体, 华文楷体-2, 楷体, 楷体-2),
+  封面: (Times-New-Roman, 华文宋体-2, 方正宋体, 中易宋体),
 )

@@ -13,13 +13,17 @@
 #let 学号 = "512xxxxxxxx"
 
 // 中文封面，分段标题使用 \n 分段
-#let 论文题目 = "简单的 Typst 论文模板"
-#let 论文题目-分段 = "简单的 Typst\n论文模板"
+#let 论文类型 = "硕士学位论文"
+#let 论文类型-英文 = "Master's Degree Thesis (Professional)"
+#let 论文题目 = "一种基于 Typst 的 简易论文模板"
+#let 论文题目-分段 = "一种基于 Typst 的 \n简易论文模板"
 #let 作者 = "张三"
 #let 院系 = "软件工程学院"
-#let 专业 = "人工智能"
+#let 专业 = "软件工程"
+#let 领域 = "专业工程领域"
 #let 指导教师 = "李四 教授"
 #let 日期 = "2025 年 3 月"
+
 
 // 英文封面
 #let 论文题目-英文 = "Simple Typst Thesis Template"

@@ -8,3 +8,8 @@
   set align(center)
   doc
 }
+
+#let meta-key = rect-key.with(tail: "：", stroke: none, w: 5em)
+#let meta-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
+#let info-key = rect-key.with(tail: "：", stroke: none, w: 7em)
+#let info-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)

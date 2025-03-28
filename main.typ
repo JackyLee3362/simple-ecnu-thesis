@@ -5,7 +5,6 @@
 // 全局样式
 #show: global-style
 
-#show: header-footer-style.with(footer-num: "i")
 // 封面
 #include "1-封面/中文封面.typ"
 #include "1-封面/英文封面.typ"
@@ -15,7 +14,7 @@
 #include "2-说明/答辩委员会.typ"
 
 // 页眉 页脚罗马字母 设置
-
+#show: header-footer-style.with(footer-num: "i")
 // 摘要和目录
 #include "3-摘要/中文摘要.typ"
 #include "3-摘要/英文摘要.typ"

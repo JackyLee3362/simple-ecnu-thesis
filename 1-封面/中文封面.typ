@@ -1,13 +1,6 @@
 #import "mod.typ": *
 #show: style
 // 中文封面
-// 设置函数
-
-#let meta-key = rect-key.with(tail: "：", stroke: none, w: 5em)
-#let meta-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
-#let info-key = rect-key.with(tail: "：", stroke: none, w: 7em)
-#let info-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
-
 // 1. 学校信息
 #{
   set align(left)
@@ -22,11 +15,14 @@
 
 // 2. 元信息
 #block(
+  above: 20pt,
+  below: 10pt,
   width: 100%,
   grid(
     columns: (50pt, 1fr, 50pt, 1fr),
     // 设置行间距
     row-gutter: 1em,
+    column-gutter: (0pt, 30pt, 0pt, 30pt),
     meta-key("分类号"), meta-value[],
     meta-key("学校代码"), meta-value(学校代码),
     meta-key("密级"), meta-value[],
@@ -46,27 +42,30 @@
 }
 
 // 4. 论文类型
-#block(
-  width: 100%,
-  above: 40pt,
-  below: 40pt,
-  stack(
-    // 方向 dir: top to bottom
-    dir: ttb,
-    spacing: 1em,
-    学校-英文,
-    "硕士学位论文",
-    "MASTER'S DISSERTATION",
-  ),
-)
-
-// 5. 论文标题
 #{
-  set text(size: 字号.一号)
+  set text(font: 字体.封面, size: 字号.四号)
   block(
     width: 100%,
     above: 40pt,
     below: 40pt,
+    stack(
+      // 方向 dir: top to bottom
+      dir: ttb,
+      spacing: 1em,
+      学校-英文,
+      text(论文类型, weight: "semibold"),
+      strong(smallcaps(论文类型-英文)),
+    ),
+  )
+}
+
+// 5. 论文标题
+#{
+  set text(font: 字体.封面, size: 字号.一号, weight: "semibold")
+  block(
+    width: 100%,
+    above: 40pt,
+    below: 60pt,
     stack(
       dir: ltr,
       论文题目-分段,
@@ -75,27 +74,35 @@
 }
 
 // 6. 作者信息
-#block(
-  width: 100%,
-  above: 40pt,
-  below: 40pt,
-  grid(
-    columns: (90pt, 120pt),
-    align: (right, left),
-    row-gutter: 1em,
-    info-key("院系"), info-value(院系),
-    info-key("专业学位类别"), info-value(专业),
-    info-key("指导教师"), info-value(指导教师),
-    info-key("学位申请人"), info-value(作者),
-  ),
-)
+#{
+  set text(font: 字体.封面, weight: "semibold")
+  block(
+    width: 100%,
+    above: 40pt,
+    below: 40pt,
+    grid(
+      columns: (90pt, 120pt),
+      align: (right, left),
+      row-gutter: .75em,
+      column-gutter: 8pt,
+      info-key("院系"), info-value(院系),
+      info-key("专业学位类别"), info-value(专业),
+      info-key("专业学位领域"), info-value(领域),
+      info-key("指导教师"), info-value(指导教师),
+      info-key("学位申请人"), info-value(作者),
+    ),
+  )
+}
 
 // 7. 日期
-#block(
-  above: 40pt,
-  below: 40pt,
-  日期,
-)
+#{
+  set text(font: 字体.封面)
+  block(
+    above: 70pt,
+    below: 40pt,
+    日期,
+  )
+}
 
 #pagebreak()
 
