@@ -140,7 +140,6 @@ $
   & "ReLU" (x) &= &max lr((0 , x))\
   & "Sigmoid" (x) & = &frac(e^x, 1 plus e^x)\
   & "Tanh" (x) & = &frac(e^x - e^(minus x), e^x plus e^(minus x))\
-  & "Softmax" (x) & = &frac(e^(x_i), sum_i e^(x_i))
 $ <eqt-activation>
 
 常见的损失函数有

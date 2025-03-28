@@ -1,6 +1,6 @@
 #import "/package/style.typ": *
 #import "/package/lib.typ": *
-#show : show-cn-fakebold
+#show: show-cn-fakebold
 
 // 全局样式
 #show: global-style
@@ -21,7 +21,9 @@
 #include "3-摘要/目录页.typ"
 
 
-// 页角设置
+// 正文标题标号设置
+#show: header-style
+// 页眉页脚设置
 #show: header-footer-style
 // 正文部分
 #include "/4-正文/1-第一章.typ"
