@@ -6,3 +6,9 @@
 #import "@preview/subpar:0.2.1"
 // 实现伪代码功能
 #import "@preview/lovelace:0.3.0": pseudocode, pseudocode-list
+// 修复 bib 等的问题
+#import "@preview/modern-nju-thesis:0.3.4": bilingual-bibliography
+// 实现化学方程式
+#import "@preview/typsium:0.2.0": ce
+// 实现伪粗体
+#import "@preview/cuti:0.3.0": show-cn-fakebold
