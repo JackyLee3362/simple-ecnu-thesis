@@ -34,12 +34,15 @@
 
 // 定义全局内容样式
 #let global-content-style(doc) = {
+  // bug
+  // show heading
   // 设置地区和语言
   set text(region: "CN", lang: "zh")
   // 设置字体和字号
   set text(font: 字体.宋体, size: 字号.小四)
   // 设置段落样式 - 段间距
-  set par(first-line-indent: 2em, spacing: 25pt)
+  set par(justify: true, first-line-indent: (amount: 2em, all: true), spacing: 1em)
+  // set par( hanging-indent:-1em )
   // 设置
   doc
 }
