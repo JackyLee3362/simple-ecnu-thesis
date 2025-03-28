@@ -20,16 +20,17 @@
 #let 作者 = "张三"
 #let 院系 = "软件工程学院"
 #let 专业 = "软件工程"
-#let 领域 = "专业工程领域"
+#let 领域 = "人工智能"
 #let 指导教师 = "李四 教授"
 #let 日期 = "2025 年 3 月"
 
 
 // 英文封面
-#let 论文题目-英文 = "Simple Typst Thesis Template"
-#let 论文题目-分段-英文 = "Simple Typst\nThesis Template"
+#let 论文题目-英文 = "A Simple Thesis Template Based Typst"
+#let 论文题目-分段-英文 = "A Simple Thesis \nTemplate Based Typst"
 #let 作者-英文 = "San Zhang"
 #let 院系-英文 = "Software Engineering Institute"
 #let 专业-英文 = "Software Engineering"
+#let 领域-英文 = "Artificial Intelligence"
 #let 指导教师-英文 = "Prof. Si Li"
 #let 日期-英文 = "Mar, 2025"

@@ -15,9 +15,8 @@
 
 // 2. 元信息
 #block(
-  above: 20pt,
-  below: 10pt,
   width: 100%,
+  above: 20pt,
   grid(
     columns: (50pt, 1fr, 50pt, 1fr),
     // 设置行间距
@@ -36,7 +35,6 @@
   block(
     width: 100%,
     above: 40pt,
-    below: 40pt,
     image("/public/ECNU-中文校徽.svg", width: 100%),
   )
 }
@@ -47,7 +45,6 @@
   block(
     width: 100%,
     above: 40pt,
-    below: 40pt,
     stack(
       // 方向 dir: top to bottom
       dir: ttb,
@@ -65,7 +62,6 @@
   block(
     width: 100%,
     above: 40pt,
-    below: 60pt,
     stack(
       dir: ltr,
       论文题目-分段,
@@ -78,8 +74,7 @@
   set text(font: 字体.封面, weight: "semibold")
   block(
     width: 100%,
-    above: 40pt,
-    below: 40pt,
+    above: 60pt,
     grid(
       columns: (90pt, 120pt),
       align: (right, left),
@@ -98,8 +93,8 @@
 #{
   set text(font: 字体.封面)
   block(
-    above: 70pt,
-    below: 40pt,
+    width: 100%,
+    above: 80pt,
     日期,
   )
 }
