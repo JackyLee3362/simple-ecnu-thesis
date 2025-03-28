@@ -17,4 +17,36 @@
   七号: 5.5pt,
   小七: 5pt,
 )
+// 英文字体
+#let Times-New-Roman = "Times New Roman"
+// 宋体
+#let 方正宋体 = "FZShuSong-Z01S"
+#let 华文宋体 = "STSong"
+#let 华文宋体-2 = "Songti SC" // Mac 上的华文宋体
+#let 中易宋体 = "SimSun" // Windows 上的宋体
+// 仿宋
+#let 方正仿宋 = "FZFangSong-Z02S"
+#let 华文仿宋 = "STFangSong"
+#let 华文仿宋-2 = "FangSong SC"
+#let 仿宋 = "FangSong"
+#let 仿宋-2 = "FangSong_GB2312"
+// 黑体
+#let 方正黑体 = "FZHei-B01S"
+#let 华文黑体 = "STHeiti"
+#let 华文黑体-2 = "Heiti SC"
+#let 中易黑体 = "SimHei"
+// 楷体
+#let 方正楷体 = "FZKai-Z03S"
+#let 华文楷体 = "STKaiti"
+#let 华文楷体-2 = "Kaiti SC"
+#let 中易楷体 = "SimKai"
+#let 楷体 = "Kaiti"
+#let 楷体-2 = "Kaiti_GB2312"
 
+// 定义 fallback 的字体
+#let 字体 = (
+  宋体: (Times-New-Roman, 方正宋体, 华文宋体, 华文宋体-2, 中易宋体),
+  仿宋: (Times-New-Roman, 方正仿宋, 华文仿宋, 华文仿宋-2, 仿宋, 仿宋-2),
+  黑体: (Times-New-Roman, 方正黑体, 华文黑体, 华文黑体-2, 中易黑体),
+  楷体: (Times-New-Roman, 方正楷体, 华文楷体, 华文楷体-2, 楷体, 楷体-2),
+)
