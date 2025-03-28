@@ -54,49 +54,16 @@
   show emph: set text(font: 字体.楷体)
   show raw: set text(font: 字体.等宽)
   show raw.where(block: true): set par(leading: 1em)
-  // 设置 figure 表格表头
-  show figure.where(kind: table): set figure.caption(position: top)
-  // 设置 figure 标题样式
-  show figure.caption: c => {
-    block(inset: (top: 0.4em, bottom: 0.4em))[
-      #text(font: 字体.楷体)[#c.supplement #context c.counter.display(c.numbering) #h(.3em) #c.body]
-    ]
-  }
   // 设置列表样式
   set enum(indent: 2em, numbering: it => text(baseline: .2em, numbering("1.", it)))
   set list(indent: 2em, marker: it => text(baseline: .2em)[•])
   // 处理一级标题的引用格式
-
   doc
 }
-
-// 子图样式设置
-#let sub-figure-numbering = (super, sub) => numbering("1.1a", counter(heading).get().first(), super, sub)
-#let figure-numbering = super => numbering("1.1", counter(heading).get().first(), super)
-#let equation-numbering = super => numbering("(1.1)", counter(heading).get().first(), super)
-#let subpar-grid = subpar.grid.with(
-  numbering: figure-numbering,
-  numbering-sub-ref: sub-figure-numbering,
-)
-#let figure-style(doc) = {
-  show heading.where(level: 1): it => {
-    counter(math.equation).update(0)
-    counter(figure.where(kind: image)).update(0)
-    counter(figure.where(kind: table)).update(0)
-    counter(figure.where(kind: raw)).update(0)
-    it
-  }
-  // 子图标题样式
-  show figure.caption: it => {
-    let pattern = "^[^:]+" + sym.space.nobreak + "[\d.]+"
-    show regex(pattern): strong
-    show regex(pattern): emph
-    it
-  }
-  show figure: set figure(numbering: figure-numbering)
-  show math.equation: set math.equation(numbering: equation-numbering)
-  doc
+// 全局字体设置
+#let global-font(doc) = {
 }
+
 
 
 //  ==================== 部分页面会用到的样式 ====================
