@@ -10,5 +10,3 @@
 #import "@preview/modern-nju-thesis:0.3.4": bilingual-bibliography
 // 实现化学方程式
 #import "@preview/typsium:0.2.0": ce
-// 实现伪粗体
-#import "@preview/cuti:0.3.0": show-cn-fakebold

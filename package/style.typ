@@ -19,14 +19,20 @@
 // 定义全局标题样式
 #let global-heading-style(doc) = {
   // 字体设置
-  show heading: set text(font: 字体.黑体)
+  show heading: set text(font: 字体.黑体, weight: "semibold")
+  // 设置一级标题间距
+  show heading.where(level: 1): it => {
+    // 这里不使用 spacing/above+below 是因为 above 在每页开头不生效
+    v(1em)
+    it
+    v(2em)
+  }
   // 字号设置
-  show heading: set text(size: 字号.小四, weight: "medium")
+  show heading: set text(size: 字号.小四)
   show heading.where(level: 1): set text(size: 字号.三号)
   show heading.where(level: 2): set text(size: 字号.四号)
   // 设置段间距
   show heading: set block(spacing: 15pt)
-  show heading.where(level: 1): set block(spacing: 30pt)
   // 设置一级标题居中
   show heading.where(level: 1): set align(center)
   doc

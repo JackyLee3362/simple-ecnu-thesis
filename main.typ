@@ -1,6 +1,5 @@
 #import "/package/style.typ": *
 #import "/package/lib.typ": *
-#show: show-cn-fakebold
 
 // 全局样式
 #show: global-style

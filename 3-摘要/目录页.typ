@@ -1,7 +1,13 @@
 
 #import "mod.typ": *
 #show: style
-#outline()
+
+#heading(outlined: false, "目录")
+
+#{
+  show: outline-font-style
+  outline(title: none)
+}
 
 #pagebreak()
 
