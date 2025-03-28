@@ -9,28 +9,28 @@
   华文宋体-2: "Songti SC", // Mac 上的华文宋体
   中易宋体: "SimSun", // Windows 上的宋体
   思源宋体: "Source Han Serif",
+  思源宋体-SC: "Source Han Serif SC",
   // 仿宋
   方正仿宋: "FZFangSong-Z02S",
   华文仿宋: "STFangSong",
-  华文仿宋-2: "FangSong SC",
+  华文仿宋-SC: "FangSong SC",
   仿宋: "FangSong",
   仿宋-2: "FangSong_GB2312",
   // 黑体,
   方正黑体: "FZHei-B01S",
   华文黑体: "STHeiti",
-  华文黑体-2: "Heiti SC",
+  华文黑体-SC: "Heiti SC",
   中易黑体: "SimHei",
   微软雅黑: "Microsoft YaHei",
   阿里巴巴普惠体: "Alibaba PuHuiTi 2.0",
-  思源黑体: "Source Han Serif SC",
   微软正黑体: "Microsoft Sans Serif",
   // 楷体
   方正楷体: "FZKai-Z03S",
   华文楷体: "STKaiti",
-  华文楷体-2: "Kaiti SC",
+  华文楷体-SC: "Kaiti SC",
   中易楷体: "SimKai",
   楷体: "Kaiti",
-  楷体-2: "Kaiti_GB2312",
+  楷体-GB2312: "Kaiti_GB2312",
   思源楷体: "Source Han Serif K",
   // 隶书
   华文隶书: "STLiti",

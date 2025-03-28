@@ -3,7 +3,7 @@
 
 = 致谢
 
-感谢
+感谢 Typst
 
 #align(right, "张三")
 #align(right, "华东师范大学")

@@ -2,7 +2,7 @@
 #import "mod.typ": *
 #show: style
 
-#heading(outlined: false, "目录")
+#heading(level: 1, outlined: false, "目录")
 
 #{
   show: outline-font-style

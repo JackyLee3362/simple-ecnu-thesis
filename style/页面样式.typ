@@ -5,6 +5,7 @@
 // - 左部和右部为 3.18cm ，等于 90pt
 #let page-style(doc) = {
   set page(
+    paper: "a4",
     margin: (
       top: 72pt,
       bottom: 72pt,

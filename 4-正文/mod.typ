@@ -21,7 +21,7 @@
 // 正文样式
 #let style(doc) = {
   // 设置靠左
-  show: header-style
   set align(left)
+  show: header-style
   doc
 }

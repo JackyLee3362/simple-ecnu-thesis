@@ -19,13 +19,13 @@
   )
 }
 
+// 下划线 key
 #let rect-key(s, tail: "", w: auto, stroke: none, use-distr: true) = {
   let body = s
   if use-distr {
     body = distr(s)
   }
   rect(
-    // fill: rgb("eeeeee"),
     height: 1.5em,
     inset: 5pt,
     width: w,
@@ -37,9 +37,10 @@
     ),
   )
 }
-#let rect-value(s, w: auto, stroke: none) = {
+
+// 下划线 value
+#let rect-value(s, w: auto, stroke: (bottom: .5pt)) = {
   rect(
-    // fill: rgb("eeeeee"),
     height: 1.5em,
     inset: 5pt,
     width: w,
@@ -48,14 +49,12 @@
   )
 }
 
-#let meta-key = rect-key.with(tail: "：", stroke: none, w: 5em)
-#let meta-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)
-#let info-key = rect-key.with(tail: "：", stroke: none, w: 7em)
-#let info-value = meta-value
+#let meta-key = rect-key.with(tail: "：", w: 5em)
+#let meta-value = rect-value.with(w: 80%)
+#let info-key = rect-key.with(tail: "：", w: 7em)
+#let info-value = rect-value.with(w: 80%)
 
-#let en-meta-key = rect-key.with(tail: ":", stroke: none, w: 10em, use-distr: false)
-#let en-meta-value = rect-key.with(stroke: none, w: 80%, use-distr: false)
-#let en-info-key = en-meta-key
-#let en-info-value = en-meta-value.with(stroke: (bottom: .5pt))
-
-#let title-value = rect-value.with((stroke: (bottom: .5pt), w: 80%), use-distr: false)
+#let en-meta-key = rect-key.with(tail: ":", w: 10em, use-distr: false)
+#let en-meta-value = rect-value.with(stroke: none, w: 80%)
+#let en-info-key = rect-key.with(tail: ":", w: 10em, use-distr: false)
+#let en-info-value = rect-value.with(stroke: (bottom: .5pt), w: 80%)

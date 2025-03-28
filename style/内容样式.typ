@@ -17,13 +17,15 @@
     // 首段缩进
     first-line-indent: (amount: 2em, all: true),
     // 段间距
-    spacing: 1em,
+    spacing: 1.5em,
     // 行间距
-    leading: 1em,
+    leading: 1.5em,
   )
-  // 设置粗体样式
+  // 设置中文粗体样式：建议使用黑体
   show strong: set text(font: sans-serif, weight: "regular")
+  // 设置中文斜体样式：建议使用楷体
   show emph: set text(font: emph-font)
+  // 设置代码样式：建议使用等宽字体
   show raw: set text(font: raw-font)
   show raw.where(block: true): set par(leading: 1em)
   // 设置列表样式

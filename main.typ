@@ -13,7 +13,7 @@
 #include "2-说明/答辩委员会.typ"
 
 // 页眉
-#show: header-style
+#show: header-style.with(title: 页眉标题)
 // 页脚(罗马字母)设置
 #show: footer-style.with(footer-num: "i")
 

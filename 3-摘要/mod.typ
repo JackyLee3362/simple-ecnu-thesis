@@ -2,10 +2,6 @@
 #import "/package/style.typ": *
 #import "/package/util.typ": *
 
-#let key-name(key) = {
-  text(font: 黑体, size: 四号, key)
-}
-
 #let outline-font-style(doc) = {
   show outline.entry.where(level: 1): it => {
     set text(font: 黑体, size: 四号)
@@ -19,14 +15,13 @@
     set text(font: 宋体, size: 小四)
     it
   }
-  set outline(indent: 2em)
-
   doc
 }
 
 #let outline-style(doc) = {
   show outline.entry: it => {
     set block(spacing: 16pt)
+    set outline(indent: 2em)
     it
   }
   doc
