@@ -1,6 +1,6 @@
 #import "/package/font.typ": *
-#let key-name-style(key) = {
-  text(font: 字体.黑体)
+#let key-name(key) = {
+  text(font: 字体.黑体, size: 字号.四号, key)
 }
 // 摘要样式
 #let style(doc) = {

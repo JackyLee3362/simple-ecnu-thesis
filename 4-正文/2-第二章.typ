@@ -71,7 +71,7 @@
 排列方式1
 
 #subpar-grid(
-  caption: [这是一张超图],
+  caption: [我是一张超图，子图纵向排列],
   figure(
     caption: [我是第一个子图a],
     rect(stroke: 1pt, height: 8em, width: 80%, fill: rgb("eeeeaa")),
@@ -85,7 +85,7 @@
 排列方式2
 
 #subpar-grid(
-  caption: [这是一张超图],
+  caption: [我是另一张超图，子图横向排列],
   kind: image,
   columns: (1fr, 1fr),
   figure(
@@ -101,19 +101,27 @@
 如何引用子图和超图
 
 #subpar-grid(
-  caption: [这是一张超图],
+  caption: [这是一张超图，子图网格排列],
   columns: (1fr, 1fr),
   kind: image,
   figure(
-    caption: [我是第一个子图a],
+    caption: [我是子图a],
     rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeaeee")),
   ),
   <sub-figure-1>,
   figure(
-    caption: [我是第二个子图b],
+    caption: [我是图b],
     rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeeeee")),
   ),
   <sub-figure-2>,
+  figure(
+    caption: [我是子图c],
+    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeae1e")),
+  ),
+  figure(
+    caption: [我是子图d],
+    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("a10ee1")),
+  ),
   label: <super-figure>,
 )
 
