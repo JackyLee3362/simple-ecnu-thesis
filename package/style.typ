@@ -16,6 +16,16 @@
   doc
 }
 
+// CJK 换行问题修复
+#let han-or-punct = "[-\p{sc=Hani}。．，、：；！‼？⁇⸺——……⋯⋯～–—·・‧/／「」『』“”‘’（）《》〈〉【】〖〗〔〕［］｛｝＿﹏●•]"
+#let cjk-fix(doc) = {
+  show regex(han-or-punct + " " + han-or-punct): it => {
+    let (a, _, b) = it.text.clusters()
+    a + b
+  }
+  doc
+}
+
 // 定义全局标题样式
 #let global-heading-style(doc) = {
   // 字体设置
@@ -64,8 +74,6 @@
   // 设置列表样式
   set enum(indent: 2em, numbering: it => text(baseline: .2em, numbering("1.", it)))
   set list(indent: 2em, marker: it => text(baseline: .2em)[•])
-
-
   doc
 }
 

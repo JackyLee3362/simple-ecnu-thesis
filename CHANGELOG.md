@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.0 - UNRELEASED
+
+1. ✅ 完善 `README.md`
+2. ✅ 修复 CJK 换行
+
 ## v0.10 - 2025-03-28
 
 1. ✅ 新增盲审版本

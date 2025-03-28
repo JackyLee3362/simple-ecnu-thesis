@@ -3,6 +3,8 @@
 
 // 全局样式
 #show: global-style
+// 中文换行修复
+#show: cjk-fix
 
 // 封面
 #include "1-封面/中文封面.typ"
