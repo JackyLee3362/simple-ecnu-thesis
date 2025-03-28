@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.0 - UNRELEASED
+## v1.0 - 2025-03-28
 
 1. ✅ 完善 `README.md`
 2. ✅ 修复 CJK 换行
