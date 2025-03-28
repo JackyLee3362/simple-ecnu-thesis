@@ -14,7 +14,7 @@
 #include "2-说明/答辩委员会.typ"
 
 // 页眉 页脚罗马字母 设置
-#show: header-footer-style.with(footer-num: "i")
+
 // 摘要和目录
 #include "3-摘要/中文摘要.typ"
 #include "3-摘要/英文摘要.typ"
@@ -23,8 +23,6 @@
 
 // 页角设置
 #show: header-footer-style
-// 子图样式设置
-#show: figure-style
 // 正文部分
 #include "/4-正文/1-第一章.typ"
 #include "/4-正文/2-第二章.typ"

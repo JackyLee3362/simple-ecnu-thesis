@@ -1,5 +1,13 @@
 # ROADMAP
 
+## Version 0.7
+
+> DEVELOPING
+
+1. ✅ 模块化 `package/style`
+2. 设置正文字体、字号样式
+3. 美化封面
+
 ## Version 0.6
 
 > 2025-03-28 RELEASE
