@@ -25,7 +25,7 @@
 
 == 机器学习
 
-我们提出了一个算法 ...... 如 <algo:split> 所示
+我们提出了一个算法 ...... 如 @algo:split 所示
 
 #figure(
   caption: [分割数据集],
@@ -51,7 +51,7 @@
         + $Y_"test" arrow.l "My-Function"(Y_"test", y)$
     + *return* $X_"train", Y_"train", X_"test", Y_"test"$ `/*生成分割数据集 */`
   ],
-)<algo:split>
+) <algo:split>
 
 使用 python 语言可以表述为
 

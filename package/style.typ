@@ -3,7 +3,7 @@
 #import "/用户设置.typ": *
 
 // 定义全局页面样式
-#let page-style(doc) = {
+#let global-page-style(doc) = {
   // 设置页边距
   set page(
     margin: (
@@ -17,7 +17,7 @@
 }
 
 // 定义全局标题样式
-#let heading-style(doc) = {
+#let global-heading-style(doc) = {
   // 字体设置
   show heading: set text(font: 字体.黑体)
   // 字号设置
@@ -33,7 +33,7 @@
 }
 
 // 定义全局内容样式
-#let content-style(doc) = {
+#let global-content-style(doc) = {
   // 设置地区和语言
   set text(region: "CN", lang: "zh")
   // 设置字体和字号
@@ -75,11 +75,11 @@
 // 全局样式
 #let global-style(doc) = {
   // 设置页面
-  show: page-style
+  show: global-page-style
   // 设置标题
-  show: heading-style
+  show: global-heading-style
   // 设置内容
-  show: content-style
+  show: global-content-style
   // 设置图形/子图样式
   show: figure-style
   doc
@@ -101,7 +101,7 @@
 }
 
 // 页眉和页脚设置
-#let header-content(left, right) = {
+#let _header-content(left, right) = {
   set text(size: 字号.五号)
   stack(
     dir: ttb,
@@ -118,9 +118,9 @@
     numbering: footer-num,
     header: context {
       if calc.odd(here().page()) {
-        header-content(hydra(1, skip-starting: false), 页眉标题)
+        _header-content(hydra(1, skip-starting: false), 页眉标题)
       } else {
-        header-content(页眉标题, hydra(1, skip-starting: false))
+        _header-content(页眉标题, hydra(1, skip-starting: false))
       }
     },
     footer: context {

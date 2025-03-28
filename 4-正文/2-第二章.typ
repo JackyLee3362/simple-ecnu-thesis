@@ -74,11 +74,11 @@
   caption: [这是一张超图],
   figure(
     caption: [我是第一个子图a],
-    rect(stroke: 1pt, height: 4em, fill: rgb("eeeeee")),
+    rect(stroke: 1pt, height: 8em, width: 80%, fill: rgb("eeeeaa")),
   ),
   figure(
     caption: [我是第二个子图b],
-    rect(stroke: 1pt, height: 4em, fill: rgb("eeeeee")),
+    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("eeaaee")),
   ),
 )
 
@@ -90,11 +90,11 @@
   columns: (1fr, 1fr),
   figure(
     caption: [我是第一个子图a],
-    rect(stroke: 1pt, height: 4em, fill: rgb("eeeeee")),
+    rect(stroke: 1pt, height: 8em, width: 40%, fill: rgb("9bea1e")),
   ),
   figure(
     caption: [我是第二个子图b],
-    rect(stroke: 1pt, height: 4em, fill: rgb("eeeeee")),
+    rect(stroke: 1pt, height: 4em, width: 40%, fill: rgb("aebaea")),
   ),
 )
 
@@ -106,12 +106,12 @@
   kind: image,
   figure(
     caption: [我是第一个子图a],
-    rect(stroke: 1pt, height: 4em, fill: rgb("eeeeee")),
+    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeaeee")),
   ),
   <sub-figure-1>,
   figure(
     caption: [我是第二个子图b],
-    rect(stroke: 1pt, height: 4em, fill: rgb("eeeeee")),
+    rect(stroke: 1pt, height: 9em, width: 40%, fill: rgb("aeeeee")),
   ),
   <sub-figure-2>,
   label: <super-figure>,
@@ -149,6 +149,6 @@ $
   & "对数损失函数" L(Y, "Pr"(Y|X)) &= &- log "Pr"(Y|X) \
   & "01损失函数" L(Y, f(X)) &= &cases(1 "if " Y != f (X), 0 "if " Y = f (X)) \
   & "Hinge 损失函数" L(y, f(X)) &=& max(0, 1 - y f(x))
-$ 
+$
 
 #pagebreak()

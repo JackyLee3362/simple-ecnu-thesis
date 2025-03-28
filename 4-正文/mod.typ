@@ -1,6 +1,6 @@
 #import "/package/lib.typ": *
-#import "/package/style.typ": *
 #import "/package/font.typ": *
+#import "/package/style.typ": subpar-grid
 
 
 

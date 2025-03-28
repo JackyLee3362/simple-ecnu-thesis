@@ -5,6 +5,7 @@
 // 全局样式
 #show: global-style
 
+#show: header-footer-style.with(footer-num: "i")
 // 封面
 #include "1-封面/中文封面.typ"
 #include "1-封面/英文封面.typ"
