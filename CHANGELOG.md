@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.1 - UNRELEASED
+## v1.1 - 2025-03-29
 
 1. ✅ 完善 `README.md`
 2. ✅ 修改 `style` 结构
