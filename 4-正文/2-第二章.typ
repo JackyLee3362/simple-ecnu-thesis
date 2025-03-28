@@ -158,5 +158,3 @@ $
   & "01损失函数" L(Y, f(X)) &= &cases(1 "if " Y != f (X), 0 "if " Y = f (X)) \
   & "Hinge 损失函数" L(y, f(X)) &=& max(0, 1 - y f(x))
 $
-
-#pagebreak()

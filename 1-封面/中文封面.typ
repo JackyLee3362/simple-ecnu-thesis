@@ -1,6 +1,7 @@
 #import "mod.typ": *
 #show: style
 // 中文封面
+
 // 1. 学校信息
 #{
   set align(left)
@@ -99,6 +100,4 @@
   )
 }
 
-#pagebreak()
-
-
+#switch-two-side(双页模式)

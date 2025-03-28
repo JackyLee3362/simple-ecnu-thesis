@@ -2,5 +2,3 @@
 #show: style
 
 = 总结展望
-
-#pagebreak()

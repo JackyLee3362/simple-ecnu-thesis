@@ -19,17 +19,18 @@
 #include "3-摘要/英文摘要.typ"
 #include "3-摘要/目录页.typ"
 
-
 // 正文标题标号设置
 #show: header-style
-// 页眉页脚设置
 #show: header-footer-style
+// 页眉页脚设置
+
 // 正文部分
 #include "/4-正文/1-第一章.typ"
 #include "/4-正文/2-第二章.typ"
 #include "/4-正文/3-第三章.typ"
 #include "/4-正文/4-第四章.typ"
 #include "/4-正文/5-第五章.typ"
+
 
 // 附录部分
 #include "/5-附录/参考文献.typ"

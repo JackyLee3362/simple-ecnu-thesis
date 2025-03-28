@@ -1,7 +1,7 @@
 #import "mod.typ": *
 #show: style
 
-= _#(作者)_ 硕士学位论文答辩委员会成员名单
+#sudo-heading()[#emph(作者) 硕士学位论文答辩委员会成员名单]
 #show table: set align(center)
 #table(
   columns: (1fr, 1fr, 4fr, 1fr),
@@ -15,4 +15,4 @@
   [], [], [], [],
 )
 
-#pagebreak()
+#switch-two-side(双页模式)

@@ -1,4 +1,7 @@
 #import "/package/font.typ": *
+#import "/package/style.typ": *
+#import "/package/util.typ": *
+
 #let key-name(key) = {
   text(font: 字体.黑体, size: 字号.四号, key)
 }

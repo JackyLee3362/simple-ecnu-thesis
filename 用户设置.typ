@@ -1,7 +1,7 @@
 // true 表示开启盲审， false 表示关闭
 #let 盲审模式 = true
 // true 表示所有的章节从奇数页开始，false 表示关闭
-#let 双页模式 = true
+#let 双页模式 = false
 //
 #let 页眉标题 = "华东师范大学专业硕士学位论文"
 

@@ -1,5 +1,6 @@
 #import "/package/lib.typ": *
 #import "/package/font.typ": *
+#import "/package/util.typ": *
 #import "/用户设置.typ": *
 
 // 定义全局页面样式
@@ -22,17 +23,18 @@
   show heading: set text(font: 字体.黑体, weight: "semibold")
   // 设置一级标题间距
   show heading.where(level: 1): it => {
-    // 这里不使用 spacing/above+below 是因为 above 在每页开头不生效
+    // 这里不使用 above 是因为靠近页边距，不生效
+    switch-two-side(双页模式)
     v(1em)
     it
-    v(2em)
   }
   // 字号设置
   show heading: set text(size: 字号.小四)
   show heading.where(level: 1): set text(size: 字号.三号)
   show heading.where(level: 2): set text(size: 字号.四号)
   // 设置段间距
-  show heading: set block(spacing: 15pt)
+  show heading: set block(spacing: 2em)
+  show heading: set block(spacing: 1.5em)
   // 设置一级标题居中
   show heading.where(level: 1): set align(center)
   doc
@@ -87,6 +89,7 @@
   show: global-content-style
   // 设置图形/子图样式
   show: figure-style
+  // 设置换页
   doc
 }
 
