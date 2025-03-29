@@ -1,6 +1,11 @@
 # CHANGELOG
 
-## v1.2 - UNRELEASED
+## v1.3 - UNRELEASED
+
+1. ✅ 重新命名项目
+2. 修改 README
+
+## v1.2 - 2025-03-29
 
 1. ✅ 修改 `README.md`
 2. ✅ 重构 `Template` 文件夹
