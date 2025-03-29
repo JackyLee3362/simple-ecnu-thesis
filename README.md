@@ -49,62 +49,22 @@ code simple-typst-thesis-template
 建议下载
 
 - 新罗马字体：`Times New Roman`，用于所有英文字体
+- 华文宋体: `Songti SC`，用于标题
 - 方正宋体: `FZShuSong-Z01S`，用于正文
-- 华文宋体: `Heiti SC`，用于标题
 - 方正楷体`FZKai-Z03S`，用于中文斜体
-- 阿里巴巴普惠体: `Alibaba PuHuiTi 2.0`，用于中文加粗
-- 等宽字体 JetBrains Mono: `JetBrains Mono`，用于代码块
+- 方正黑体: `FZHei-B01S`，用于中文加粗
+- JetBrains Mono: `JetBrains Mono`，用于代码块
 
 ## 🗃️ 项目结构
 
 ```sh
-Project
-│   main.typ           主文件
-│   用户设置.typ       用户配置文件
-│
-├───1-封面
-│       mod.typ        封面样式
-│       中文封面.typ
-│       英文封面.typ
-│
-├───2-说明
-│       mod.typ        说明文件样式
-│       原创性声明.typ
-│       答辩委员会.typ
-│
-├───3-摘要
-│       mod.typ        摘要样式
-│       中文摘要.typ
-│       目录页.typ
-│       英文摘要.typ
-│
-├───4-正文
-│       1-第一章.typ
-│       2-第二章.typ
-│       3-第三章.typ
-│       4-第四章.typ
-│       5-第五章.typ
-│       mod.typ        正文样式
-│
-├───5-附录
-│       mod.typ
-│       参考文献.typ
-│       科研情况.typ
-│       致谢.typ       附录样式
-│
-├───demo               示例文件夹，可以单独预览
-├───image              存放论文图片的文件夹
-├───style              存放样式的文件夹
-├───package
-│       font.typ       字体配置文件
-│       lib.typ        导入三方库的文件
-│       style.typ      全局样式文件夹
-│       util.typ       全局工具类
-│
-├───public             存放校徽等公共资源文件
-│
-└───参考文献           放置 bib 参考文献的文件夹
-
+├───assets   ... README 文件文件
+├───package  ... 项目样式、库等的定义
+├───public   ... 缩略图片存放
+├───style    ... 子样式文件
+├───template ... 模板
+├───test     ... 测试文件
+└─── lib.typ ... 模板入口文件
 ```
 
 ## 为什么会有该项目？
