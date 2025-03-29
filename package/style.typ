@@ -1,8 +1,9 @@
+// 导入
 #import "/package/lib.typ": *
 #import "/package/font.typ": *
 #import "/package/util.typ": *
-// 自定义变量和样式
-#import "/template/用户设置.typ": *
+// // 自定义变量和样式
+// #import "/template/用户设置.typ": *
 // 拆分定义，更好理解
 #import "/style/页面样式.typ": *
 #import "/style/标题样式.typ": *
@@ -24,6 +25,3 @@
   show: cjk-fix
   doc
 }
-
-
-

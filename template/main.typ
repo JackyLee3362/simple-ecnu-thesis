@@ -1,6 +1,7 @@
 #import "/package/style.typ": *
 #import "/package/lib.typ": *
-#import "@preview/simple-"
+#import "用户设置.typ": *
+// #import "@preview/simple-"
 
 // 全局样式
 #show: global-style

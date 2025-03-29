@@ -1,6 +1,7 @@
 #import "/package/font.typ": *
 #import "/package/style.typ": *
 #import "/package/util.typ": *
+#import "../用户设置.typ": *
 
 #let outline-font-style(doc) = {
   show outline.entry.where(level: 1): it => {

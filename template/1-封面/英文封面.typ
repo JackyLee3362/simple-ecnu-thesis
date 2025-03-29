@@ -37,7 +37,7 @@
   block(
     width: 100%,
     above: 100pt,
-    image("/public/ECNU-英文校徽.svg"),
+    image("../public/ECNU-英文校徽.svg"),
   )
 }
 
