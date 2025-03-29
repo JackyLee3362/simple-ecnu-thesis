@@ -1,4 +1,4 @@
-#import "/package/lib.typ": *
+#import "/lib.typ": *
 #import "/package/font.typ": *
 #import "/package/style.typ": *
 #import "/package/util.typ": *
