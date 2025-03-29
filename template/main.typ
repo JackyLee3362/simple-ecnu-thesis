@@ -1,5 +1,4 @@
 #import "lib.typ": *
-// #import "@preview/simple-"
 
 // 全局样式
 #show: global-style
