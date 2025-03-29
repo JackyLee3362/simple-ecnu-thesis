@@ -1,10 +1,10 @@
 [package]
-name = "simple-cn-thesis-template"
+name = "simple-zh-thesis-template"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Jacky Lee <@JackyLee3362>"]
 license = "MIT"
-description = "一份简单的研究生中文论文模板 Simple Typst Thesis Template，默认封面为【华东师范大学】"
+description = "一份简单的研究生中文论文模板 Simple cn Thesis Template，默认封面为【华东师范大学】"
 repository = "https://github.com/JackyLee3362/simple-typst-thesis-template"
 keywords = ["thesis", "master", "doctor", "university", "ecnu"]
 categories = ["thesis"]

@@ -1,2 +1,2 @@
-#import "@preview/simple-cn-thesis-template:0.1.0": *
+#import "@preview/simple-zh-thesis-template:0.1.0": *
 #import "用户设置.typ": *
