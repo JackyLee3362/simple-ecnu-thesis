@@ -69,7 +69,7 @@
 #figure(
   caption: [崩坏星穹铁道],
   kind: image,
-  image("/image/崩坏星穹铁道.png", width: 80%),
+  image("../image/崩坏星穹铁道.png", width: 80%),
 )
 
 == 子图的不同排列方式

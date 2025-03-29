@@ -1,7 +1,4 @@
-#import "/package/style.typ": *
-#import "/package/font.typ": *
-
-#import "../用户设置.typ": *
+#import "../lib.typ": *
 
 // 说明页面样式
 #let style(doc) = {

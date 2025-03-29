@@ -1,6 +1,4 @@
-#import "/package/style.typ": *
-#import "/package/lib.typ": *
-#import "用户设置.typ": *
+#import "lib.typ": *
 // #import "@preview/simple-"
 
 // 全局样式
