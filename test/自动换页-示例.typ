@@ -1,5 +1,5 @@
 #set page("a8")
-#import "../main.typ": *
+#import "../template/main.typ": *
 
 // #show: header-style
 // #show: header-footer-style
