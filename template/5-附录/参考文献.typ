@@ -16,5 +16,5 @@ style: 可填入的值
 #bilingual-bibliography(bibliography: bibliography.with(
   full: false,
   style: "gb-7714-2015-numeric",
-  ("/参考文献/文献-1.bib", "/参考文献/文献-2.bib")))
+  ("../参考文献/文献-1.bib", "../参考文献/文献-2.bib")))
 

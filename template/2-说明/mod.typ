@@ -1,4 +1,4 @@
-#import "/用户设置.typ": *
+#import "/template/用户设置.typ": *
 #import "/package/style.typ": *
 #import "/package/font.typ": *
 

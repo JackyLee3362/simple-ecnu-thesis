@@ -1,5 +1,6 @@
 #import "/package/style.typ": *
-#import "/lib.typ": *
+#import "/package/lib.typ": *
+#import "@preview/simple-"
 
 // 全局样式
 #show: global-style
@@ -26,13 +27,13 @@
 #show: footer-style
 
 // 正文部分
-#include "/4-正文/1-第一章.typ"
-#include "/4-正文/2-第二章.typ"
-#include "/4-正文/3-第三章.typ"
-#include "/4-正文/4-第四章.typ"
-#include "/4-正文/5-第五章.typ"
+#include "4-正文/1-第一章.typ"
+#include "4-正文/2-第二章.typ"
+#include "4-正文/3-第三章.typ"
+#include "4-正文/4-第四章.typ"
+#include "4-正文/5-第五章.typ"
 
 // 附录部分
-#include "/5-附录/参考文献.typ"
-#include "/5-附录/科研情况.typ"
-#include "/5-附录/致谢.typ"
+#include "5-附录/参考文献.typ"
+#include "5-附录/科研情况.typ"
+#include "5-附录/致谢.typ"
