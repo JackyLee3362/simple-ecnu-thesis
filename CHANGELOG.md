@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.2 - UNRELEASED
+
+1. ✅ 修改 `README.md`
+2. ✅ 重构 `Template` 文件夹
+
 ## v1.1 - 2025-03-29
 
 1. ✅ 完善 `README.md`
