@@ -8,5 +8,3 @@
 #import "@preview/lovelace:0.3.0": pseudocode, pseudocode-list
 // 修复 bib 等的问题
 #import "@preview/modern-nju-thesis:0.3.4": bilingual-bibliography
-// 实现化学方程式
-#import "@preview/typsium:0.2.0": ce
