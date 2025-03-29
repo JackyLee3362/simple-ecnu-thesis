@@ -1,6 +1,6 @@
-# 一个简单的中文论文 Typst 模板
+# 一份简单的华东师范大学论文模板
 
-项目地址：[JackyLee3362/simple-typst-thesis-template](https://github.com/JackyLee3362/simple-typst-thesis-template)
+项目地址：[JackyLee3362/simple-ecnu-thesis](https://github.com/JackyLee3362/simple-ecnu-thesis)
 
 ![alt text](assets/beamer.png)
 
@@ -22,7 +22,7 @@
 ### 本地项目
 
 ```sh
-git clone https://github.com/JackyLee3362/simple-typst-thesis-template.git
+git clone https://github.com/JackyLee3362/simple-ecnu-thesis
 code simple-typst-thesis-template
 ```
 
