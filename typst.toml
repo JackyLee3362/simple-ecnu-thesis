@@ -10,7 +10,7 @@ keywords = ["thesis", "master", "doctor", "university", "ecnu"]
 categories = ["thesis"]
 exclude = [".vscode", ".github", "assets", "demo", "test", "fonts", "tmp"]
 
-# [template]
-# path = "template"
-# entrypoint = "main.typ"
-# thumbnail = "public/thumbnail.png"
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "public/thumbnail.png"
